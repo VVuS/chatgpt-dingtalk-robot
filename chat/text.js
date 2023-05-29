@@ -70,9 +70,9 @@ export default class TextChat extends Chat {
 
         let markdown = null;
         if (info.conversationType === '1')
-            markdown = MDUserMsg(answer.slice(0,30), answer);
+            markdown = MDUserMsg(answer.slice(0,2000), answer);
         else if (info.conversationType === '2')
-            markdown = MDGroupMsg(answer.slice(0,30), senderId, answer);
+            markdown = MDGroupMsg(answer.slice(0,2000), senderId, answer);
         
         res.set({
             'Content-Type': 'application/json',
